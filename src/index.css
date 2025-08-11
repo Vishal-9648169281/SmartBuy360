@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 221 39% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 221 39% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 39% 11%;
+
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 155 62% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 246 15% 97%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 207 90% 54%;
+
+    /* SmartBuy360 Custom Design Tokens */
+    --brand: 207 90% 54%;
+    --brand-light: 207 90% 64%;
+    --brand-dark: 207 90% 44%;
+    
+    --success: 155 62% 50%;
+    --success-light: 155 62% 60%;
+    --success-dark: 155 62% 40%;
+    
+    --price: 260 62% 50%;
+    --price-light: 260 62% 60%;
+    --price-best: 155 62% 50%;
+    
+    --deal: 30 95% 55%;
+    --deal-light: 30 95% 65%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand)), hsl(var(--success)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(246 15% 98%));
+    --gradient-price: linear-gradient(135deg, hsl(var(--price)), hsl(var(--brand)));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(220 13% 91% / 0.3), 0 2px 4px -1px hsl(220 13% 91% / 0.2);
+    --shadow-card-hover: 0 10px 15px -3px hsl(220 13% 91% / 0.4), 0 4px 6px -2px hsl(220 13% 91% / 0.3);
+    --shadow-price: 0 0 20px hsl(var(--price) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 221 39% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 224 36% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 224 36% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 155 62% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 207 90% 54%;
+
+    /* Dark mode custom tokens */
+    --brand: 207 90% 54%;
+    --brand-light: 207 90% 64%;
+    --brand-dark: 207 90% 44%;
+    
+    --success: 155 62% 50%;
+    --success-light: 155 62% 60%;
+    --success-dark: 155 62% 40%;
+    
+    --price: 260 62% 50%;
+    --price-light: 260 62% 60%;
+    --price-best: 155 62% 50%;
+    
+    --deal: 30 95% 55%;
+    --deal-light: 30 95% 65%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand)), hsl(var(--success)));
+    --gradient-card: linear-gradient(145deg, hsl(224 36% 15%), hsl(215 28% 17%));
+    --gradient-price: linear-gradient(135deg, hsl(var(--price)), hsl(var(--brand)));
+    
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-card-hover: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+    --shadow-price: 0 0 20px hsl(var(--price) / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
